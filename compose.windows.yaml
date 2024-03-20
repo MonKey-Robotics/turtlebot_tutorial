@@ -1,0 +1,19 @@
+version: "latest"
+
+services:
+  monkey-turtlebot:
+    build:
+      context: ./
+      dockerfile: "Dockerfile"
+    image: "monkey/humble/turtlebot"
+    command: /bin/bash
+    stdin_open: true ## docker run -i
+    tty: true        ## docker run -t
+    environment:
+      DISPLAY: host.docker.internal:0.0
+      LIBGL_ALWAYS_INDIRECT: 0
+    network_mode: "host"
+    user: "monkey"
+    # volumes:
+    #   - ./rover_control:/home/monkey/rover_ws/src/rover_control
+  
