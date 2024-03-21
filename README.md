@@ -3,11 +3,14 @@
 
 Dockerfile for MonKey Turtlebot ROS2 Tutorials.
 
+
 ## Docker Deployment
 
 ### Windows
 To build docker image:
 ```bash
+git clone https://github.com/MonKey-Robotics/turtlebot_tutorial.git
+cd turtlebot_tutorial
 docker compose -f compose.windows.yaml build
 ```
 
@@ -20,6 +23,8 @@ docker compose -f compose.windows.yaml exec monkey-turtlebot bash
 ### Linux
 To build docker image:
 ```bash
+git clone https://github.com/MonKey-Robotics/turtlebot_tutorial.git
+cd turtlebot_tutorial
 docker compose -f compose.ubuntu.yaml build
 ```
 
